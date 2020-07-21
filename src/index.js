@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Hola from './components/Hola';
+import App from './containers/App';
 
-ReactDom.render(<Hola />, document.getElementById('app'));
+ReactDom.render(<App />, document.getElementById('app'));
