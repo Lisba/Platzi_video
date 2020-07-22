@@ -8,11 +8,12 @@ import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 import useInitialState from '../hooks/useInitialState';
 
-const App = () => {
-  const API = 'http://localhost:3000/initialState';
+const API = 'http://localhost:3000/initialState';
+
+const Home = () => {
   const initialstate = useInitialState(API);
 
-  return initialstate.length === 0 ? <h1>Loading...</h1> : (
+  return Object.keys(initialstate).length === 0 ? <h1 style={{textAlign: "center"}}>Loading...</h1> : (
     <div className='App'>
       <Header />
       <Search />
@@ -48,4 +49,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
