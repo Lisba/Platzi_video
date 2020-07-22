@@ -11,8 +11,8 @@ import useInitialState from '../hooks/useInitialState';
 const App = () => {
   const API = 'http://localhost:3000/initialState';
   const initialstate = useInitialState(API);
-
-  return initialstate.length === 0 ? <h1>Loading...</h1> : (
+console.log(Object.keys(initialstate).length)
+  return Object.keys(initialstate).length === 0 ? <h1>Loading...</h1> : (
     <div className='App'>
       <Header />
       <Search />
