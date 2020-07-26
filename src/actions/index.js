@@ -1,4 +1,4 @@
-import { SET_FAVORITE, REMOVE_FAVORITE } from '../types';
+import { SET_FAVORITE, REMOVE_FAVORITE, LOGIN_REQUEST } from '../types';
 
 export const setFavorite = (payload) => {
     return {
@@ -13,3 +13,10 @@ export const removeFavorite = (payload) => {
         payload,
     }
 };
+
+export const loginRequest = (payload) => {
+    return {
+        type: LOGIN_REQUEST,
+        payload,
+    }
+}

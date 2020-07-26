@@ -8,7 +8,7 @@ import removeIcon from '../assets/static/remove-icon.png';
 import '../assets/styles/components/CarouselItem.scss';
 
 const CarouselItem = (props) => {
-  const { id, cover, title, year, contentRating, duration } = props;
+  const { id, cover, title, year, contentRating, duration, isList } = props;
 
   const handleSetFavorite = () => {
       props.setFavorite({ id, cover, title, year, contentRating, duration });
@@ -16,7 +16,7 @@ const CarouselItem = (props) => {
 
   const handleRemoveFavorite = () => {
     props.removeFavorite(id);
-};
+  };
 
   return (
     <div className='carousel-item'>
@@ -24,8 +24,11 @@ const CarouselItem = (props) => {
       <div className='carousel-item__details'>
         <div>
           <img className='carousel-item__details--img' src={playIcon} alt='Play Icon' />
-          <img className='carousel-item__details--img' src={plusIcon} alt='Plus Icon' onClick={handleSetFavorite} />
-          <img className='carousel-item__details--img' src={removeIcon} alt='Remove Icon' onClick={handleRemoveFavorite} />
+
+          {isList ? <img className='carousel-item__details--img' src={removeIcon} alt='Remove Icon' onClick={handleRemoveFavorite} />
+            : <img className='carousel-item__details--img' src={plusIcon} alt='Plus Icon' onClick={handleSetFavorite} />
+          }
+
         </div>
         <p className='carousel-item__details--title'>{title}</p>
         <p className='carousel-item__details--subtitle'>{`${year} ${contentRating} ${duration}`}</p>
@@ -35,11 +38,13 @@ const CarouselItem = (props) => {
 };
 
 CarouselItem.propTypes = {
+  id: PropTypes.number,
   cover: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
   contentRating: PropTypes.string,
   duration: PropTypes.number,
+  isList: PropTypes.bool,
 };
 
 const mapDispatchToProps = {
