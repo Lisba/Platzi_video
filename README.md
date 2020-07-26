@@ -22,6 +22,8 @@ Platzi video app, for practicing content learned from the platzi's react course.
 
 ## Docs
 
+### React
 https://docs.google.com/document/d/1S1Ft3z26sR_eE5HXnglAHfNlQFhuPhc3nZhQ0o0Xhlw/edit?usp=sharing
 
+### React-Router / Redux
 https://docs.google.com/document/d/1bhy_F2HaG__R83yQiyCraA82TksjSUcHQ2ui4pU4BXs/edit?usp=sharing
