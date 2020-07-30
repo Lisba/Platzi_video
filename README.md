@@ -4,21 +4,21 @@ Platzi video app, for practicing content learned from the platzi's react course.
 
 ## Run the project
 
-### In feature/router-redux branch (Recomended)
+### In master branch (Recomended)
 
 1) Clone the repo.
 2) Go to folder: cd Platzi_video.
-3) Run console command: git checkout feature/router-redux
 3) Install the dependencies: npm install.
-6) Run the project: npm start.
+4) Run the project: npm run start.
 
-### In master branch
+### In react-only branch
 1) Clone the repo.
 2) Go to folder: cd Platzi_video.
-3) Install the dependencies: npm install.
-4) Install json-server globally (as admin on windows): sudo npm install -g json-server.
-5) Run the Fake Api server: json-server initialState.json.
-6) Run the project: npm start.
+3) Run console command: git checkout react-only
+4) Install the dependencies: npm install.
+5) Install json-server globally (as admin on windows): sudo npm install -g json-server.
+6) Run the Fake Api server: json-server initialState.json.
+7) Run the project: npm run start.
 
 ## Docs
 
