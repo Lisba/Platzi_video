@@ -1,6 +1,8 @@
 # Platzi Video
 
-Platzi video app, for practicing content learned from the platzi's react course.
+A video app, for practicing content learned from the platzi's react course.
+
+### [Deployed here](https://platzivideo-74f6e.web.app/)
 
 ## Run the project
 
